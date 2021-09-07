@@ -12,12 +12,11 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .add(android.R.id.content, MainFragment.newInstance())
-                .addToBackStack("mainFragment").commit()
+                .add(android.R.id.content, MainFragment.newInstance()).commit()
         }
     }
 
-    /* pass the name to a new instance of DetailFragment, where we will do a new
+    /* Option without using Parcelable: pass the name to a new instance of DetailFragment, where we will do a new
       network request to get information about that character for the detail page*/
     fun openDetailFragment(name: String) {
         supportFragmentManager.beginTransaction()

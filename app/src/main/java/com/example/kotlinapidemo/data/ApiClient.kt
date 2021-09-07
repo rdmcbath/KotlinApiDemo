@@ -14,9 +14,9 @@ object ApiClient {
     }
 
     private fun initializeClient() : PokemonApi? {
-        var gson = GsonBuilder()
+        val gson = GsonBuilder()
         gson.registerTypeAdapter(Uri::class.java, UriTypeAdapter())
-        var gsonConverterFactory = GsonConverterFactory.create(gson.create())
+        val gsonConverterFactory = GsonConverterFactory.create(gson.create())
         client = Retrofit.Builder().baseUrl("https://pokeapi.co/api/v2/")
             .client(HttpClient.client)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())

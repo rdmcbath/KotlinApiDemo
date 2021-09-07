@@ -4,7 +4,7 @@ import android.net.Uri
 import com.google.gson.*
 import java.lang.reflect.Type
 
-/*Serialization means to convert an object into that string, and
+/*Serialization to convert an object into a string, and
 deserialization is its inverse operation (convert string -> object)*/
 
 class UriTypeAdapter : JsonSerializer<Uri>,

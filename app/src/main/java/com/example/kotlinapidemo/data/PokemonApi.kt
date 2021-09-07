@@ -10,7 +10,7 @@ import retrofit2.http.Path
 interface PokemonApi {
 
     @GET("pokemon")
-    fun pokemonList() :  Single<Result<PokemonListResult>>
+    fun getPokemonList() :  Single<Result<PokemonListResult>>
 
     @GET("pokemon/{name}")
     fun getDetailByName(@Path("name") name : String) : Single<Result<PokemonDetail>>
